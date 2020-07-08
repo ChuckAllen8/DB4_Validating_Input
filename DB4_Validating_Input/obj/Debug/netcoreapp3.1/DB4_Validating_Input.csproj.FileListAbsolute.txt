@@ -11,3 +11,16 @@ C:\devbuild4\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.c
 C:\devbuild4\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.dll
 C:\devbuild4\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.pdb
 C:\devbuild4\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.genruntimeconfig.cache
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\bin\Debug\netcoreapp3.1\DB4_Validating_Input.exe
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\bin\Debug\netcoreapp3.1\DB4_Validating_Input.deps.json
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\bin\Debug\netcoreapp3.1\DB4_Validating_Input.runtimeconfig.json
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\bin\Debug\netcoreapp3.1\DB4_Validating_Input.runtimeconfig.dev.json
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\bin\Debug\netcoreapp3.1\DB4_Validating_Input.dll
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\bin\Debug\netcoreapp3.1\DB4_Validating_Input.pdb
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.csprojAssemblyReference.cache
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.AssemblyInfoInputs.cache
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.AssemblyInfo.cs
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.csproj.CoreCompileInputs.cache
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.dll
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.pdb
+C:\devbuild4\DB4_Validating_Input\DB4_Validating_Input\obj\Debug\netcoreapp3.1\DB4_Validating_Input.genruntimeconfig.cache
