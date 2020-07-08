@@ -40,7 +40,7 @@ namespace DB4_Validating_Input
                 VerifyEmail(GetInput("\nPlease enter a valid email: "));
                 VerifyPhoneNumber(GetInput("\nPlease enter a valid phone number: "));
                 VerifyDate(GetInput("\nPlease enter a valid date: "));
-                moreEntries = RunAgain();
+                moreEntries = RunAgain(GetInput("\nContinue? (Y/Yes, anything else quits: "));
             }
         }
 
@@ -50,9 +50,8 @@ namespace DB4_Validating_Input
             return Console.ReadLine();
         }
 
-        private bool RunAgain()
+        private bool RunAgain(string again)
         {
-            string again = GetInput("\nContinue? (Y/Yes, anything else quits: ");
             Console.WriteLine("");
             if(again.ToUpper() == "Y" || again.ToUpper() == "YES")
             {
@@ -143,14 +142,16 @@ namespace DB4_Validating_Input
          * months are from 1-12
          * years are from 1000-2999 if using 4 digit
          * or 01-29 if using 2 digit.
-         * format is
+         * format is:
          * day/month/year
+         * - can be substituted for the /
          * 
          * Valid Entries:
          * 1/1/1000
          * 31/12/2999
          * 01/01/01
          * 31/12/29
+         * 01-01-01
          * 
          */
         private void VerifyDate(string input)
