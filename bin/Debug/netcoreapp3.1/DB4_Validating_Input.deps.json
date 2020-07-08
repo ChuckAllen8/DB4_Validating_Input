@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DB4_Validating_Input/1.0.0": {
+        "runtime": {
+          "DB4_Validating_Input.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DB4_Validating_Input/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
