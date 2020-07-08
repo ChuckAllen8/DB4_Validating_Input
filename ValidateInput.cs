@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
 
 namespace DB4_Validating_Input
 {
-    class ValidateInput
+    public class ValidateInput
     {
         private Regex emailValidator;
         private Regex nameValidator;
@@ -41,21 +41,21 @@ namespace DB4_Validating_Input
                 VerifyPhoneNumber(GetInput("\nPlease enter a valid phone number: "));
                 VerifyDate(GetInput("\nPlease enter a valid date: "));
                 moreEntries = RunAgain(GetInput("\nContinue? (Y/Yes, anything else quits: "));
+                Console.Clear();
             }
         }
 
-        private string GetInput(string prompt)
+        public string GetInput(string prompt)
         {
             Console.Write(prompt);
             return Console.ReadLine();
         }
 
-        private bool RunAgain(string again)
+        public bool RunAgain(string again)
         {
             Console.WriteLine("");
             if(again.ToUpper() == "Y" || again.ToUpper() == "YES")
             {
-                Console.Clear();
                 return true;
             }
             else
@@ -71,15 +71,17 @@ namespace DB4_Validating_Input
          * Pnly letters are allowed.
          * 
          */
-        private void VerifyName(string input)
+        public bool VerifyName(string input)
         {
             if (nameValidator.IsMatch(input))
             {
                 Console.WriteLine($"{input} is a valid name!");
+                return true;
             }
             else
             {
                 Console.WriteLine($"Sorry, {input} is NOT a valid name!");
+                return false;
             }
         }
 
@@ -92,15 +94,17 @@ namespace DB4_Validating_Input
          * Special Characters are not allowed, numbers are allowed even after the .
          * 
          */
-        private void VerifyEmail(string input)
+        public bool VerifyEmail(string input)
         {
             if (emailValidator.IsMatch(input))
             {
                 Console.WriteLine($"{input} is a valid email!");
+                return true;
             }
             else
             {
                 Console.WriteLine($"Sorry, {input} is NOT a valid email!");
+                return false;
             }
         }
 
@@ -122,15 +126,17 @@ namespace DB4_Validating_Input
          * 333 333.3333
          * 
          */
-        private void VerifyPhoneNumber(string input)
+        public bool VerifyPhoneNumber(string input)
         {
             if (phoneNumberValidator.IsMatch(input))
             {
                 Console.WriteLine($"{input} is a valid phone number!");
+                return true;
             }
             else
             {
                 Console.WriteLine($"Sorry, {input} is NOT a valid phone number!");
+                return false;
             }
         }
 
@@ -154,15 +160,17 @@ namespace DB4_Validating_Input
          * 01-01-01
          * 
          */
-        private void VerifyDate(string input)
+        public bool VerifyDate(string input)
         {
             if (dateValidator.IsMatch(input))
             {
                 Console.WriteLine($"{input} is a valid date!");
+                return true;
             }
             else
             {
                 Console.WriteLine($"Sorry, {input} is NOT a valid date!");
+                return false;
             }
         }
     }
