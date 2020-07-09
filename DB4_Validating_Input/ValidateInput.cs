@@ -1,11 +1,8 @@
 ﻿/* 
  * 
- * 2: only alphabets, start with capital, maximum length of 30. Min length? other capitals?
- *  : make our decision on single letter names and mixed case names.
- *  : include it commented in the code.
- * 3: 
- * 4: 
- * 5: 
+ * Created by Chuck Allen as a lab submission.
+ * Shows the use of Regular Expressions in verifying
+ * emails, names, dates, phone numbers, and HTML segments.
  * 
  * 
  */
@@ -22,6 +19,7 @@ namespace DB4_Validating_Input
         private Regex nameValidator;
         private Regex dateValidator;
         private Regex phoneNumberValidator;
+        private Regex htmlValidator;
 
         public ValidateInput()
         {
@@ -29,7 +27,9 @@ namespace DB4_Validating_Input
             nameValidator = new Regex(@"^[A-Z][A-Za-z]{1,29}$");
             dateValidator = new Regex(@"(^[1-9]|(0[1-9]|1[0-9]|2[0-9]|30|31))[\/\-]([1-9]|(0[1-9]|10|11|12))[\/\-]([12][0-9][0-9][0-9]|[012][1-9]|[12][0-9])$");
             phoneNumberValidator = new Regex(@"^\(?\d\d\d(\)?[\.\-\s]|\))\d\d\d[\.\-]\d\d\d\d$");
+            htmlValidator = new Regex(@"^<([A-Za-z0-9]+)>.*<\/\1>$");
         }
+
         public void Start()
         {
             bool moreEntries = true;
@@ -40,12 +40,13 @@ namespace DB4_Validating_Input
                 VerifyEmail(GetInput("\nPlease enter a valid email: "));
                 VerifyPhoneNumber(GetInput("\nPlease enter a valid phone number: "));
                 VerifyDate(GetInput("\nPlease enter a valid date: "));
+                VerifyHTML(GetInput("\nPlease enter a valid HTML segment: "));
                 moreEntries = RunAgain(GetInput("\nContinue? (Y/Yes, anything else quits: "));
                 Console.Clear();
             }
         }
 
-        public string GetInput(string prompt)
+        private string GetInput(string prompt)
         {
             Console.Write(prompt);
             return Console.ReadLine();
@@ -170,6 +171,20 @@ namespace DB4_Validating_Input
             else
             {
                 Console.WriteLine($"Sorry, {input} is NOT a valid date!");
+                return false;
+            }
+        }
+
+        public bool VerifyHTML(string input)
+        {
+            if (htmlValidator.IsMatch(input))
+            {
+                Console.WriteLine($"{input} is a valid segment of HTML!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"Sorry, {input} is NOT a valid segment of HTML!");
                 return false;
             }
         }
