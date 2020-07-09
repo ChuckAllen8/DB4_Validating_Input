@@ -7,7 +7,7 @@ namespace DB4_Validating_Input_Tests
     public class ValidateEmailTests
     {
         [Fact]
-        [Trait("Description", "Test user names can't be too short.")]
+        [Trait("Type", "OutOfBounds")]
         public void TestUserNameTooShort()
         {
             ValidateInput toTest = new ValidateInput();
@@ -15,7 +15,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test user names can't be too long.")]
+        [Trait("Type", "OutOfBounds")]
         public void TestUserNameTooLong()
         {
             ValidateInput toTest = new ValidateInput();
@@ -23,7 +23,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test user names at the lower limit are okay.")]
+        [Trait("Type", "WithinBounds")]
         public void TestUserNameLowerLimit()
         {
             ValidateInput toTest = new ValidateInput();
@@ -31,7 +31,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test user names at the upper limit are okay.")]
+        [Trait("Type", "WithinBounds")]
         public void TestUserNameUpperLimit()
         {
             ValidateInput toTest = new ValidateInput();
@@ -39,7 +39,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test user names cannot have special characters.")]
+        [Trait("Type", "Feature")]
         public void TestUserNameNoSpecialCharacters()
         {
             ValidateInput toTest = new ValidateInput();
@@ -47,7 +47,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test user names can have numbers.")]
+        [Trait("Type", "Feature")]
         public void TestUserNameNumbersAllowed()
         {
             ValidateInput toTest = new ValidateInput();
@@ -55,7 +55,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Domain Name can't be too short.")]
+        [Trait("Type", "OutOfBounds")]
         public void TestDomainNameTooShort()
         {
             ValidateInput toTest = new ValidateInput();
@@ -63,7 +63,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Domain Name can't be too long.")]
+        [Trait("Type", "OutOfBounds")]
         public void TestDomainNameTooLong()
         {
             ValidateInput toTest = new ValidateInput();
@@ -71,7 +71,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Domain Name at lower limit is okay.")]
+        [Trait("Type", "WithinBounds")]
         public void TestDomainNameLowerLimit()
         {
             ValidateInput toTest = new ValidateInput();
@@ -79,7 +79,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Domain Name at upper limit is okay.")]
+        [Trait("Type", "WithinBounds")]
         public void TestDomainNameUpperLimit()
         {
             ValidateInput toTest = new ValidateInput();
@@ -87,7 +87,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Domain Name cannot have special characters.")]
+        [Trait("Type", "Feature")]
         public void TestDomainNameNoSpecialCharacters()
         {
             ValidateInput toTest = new ValidateInput();
@@ -95,7 +95,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Domain Name can have numbers.")]
+        [Trait("Type", "Feature")]
         public void TestDomainNameNumbersAllowed()
         {
             ValidateInput toTest = new ValidateInput();
@@ -103,7 +103,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Extension cannot be too short.")]
+        [Trait("Type", "OutOfBounds")]
         public void TestExtensionTooShort()
         {
             ValidateInput toTest = new ValidateInput();
@@ -111,7 +111,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Extension cannot be too long.")]
+        [Trait("Type", "OutOfBounds")]
         public void TestExtensionTooLong()
         {
             ValidateInput toTest = new ValidateInput();
@@ -119,7 +119,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Extension at lower limit is okay.")]
+        [Trait("Type", "WithinBounds")]
         public void TestExtensionLowerLimit()
         {
             ValidateInput toTest = new ValidateInput();
@@ -127,7 +127,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Extension at upper limit is okay.")]
+        [Trait("Type", "WithinBounds")]
         public void TestExtensionUpperLimit()
         {
             ValidateInput toTest = new ValidateInput();
@@ -135,7 +135,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Extension cannot have special characters.")]
+        [Trait("Type", "Feature")]
         public void TestExtensionNoSpecialCharacters()
         {
             ValidateInput toTest = new ValidateInput();
@@ -143,7 +143,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Test Extension can have numbers.")]
+        [Trait("Type", "Feature")]
         public void TestExtensionNumbersAllowed()
         {
             ValidateInput toTest = new ValidateInput();
@@ -151,7 +151,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "An at symbol is required")]
+        [Trait("Type", "Feature")]
         public void TestAtSignRequired()
         {
             ValidateInput toTest = new ValidateInput();
@@ -159,7 +159,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "A . is required")]
+        [Trait("Type", "Feature")]
         public void TestDotSymbolRequired()
         {
             ValidateInput toTest = new ValidateInput();

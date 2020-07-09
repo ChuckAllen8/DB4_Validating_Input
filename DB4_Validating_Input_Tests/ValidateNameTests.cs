@@ -7,7 +7,7 @@ namespace DB4_Validating_Input_Tests
     public class ValidateNameTests
     {
         [Fact]
-        [Trait("Description", "Tests to make sure a single letter is not a name.")]
+        [Trait("Type", "OutOfBounds")]
         public void TestNameLengthLessThanMinimum()
         {
             ValidateInput toTest = new ValidateInput();
@@ -15,7 +15,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Tests to make sure a two letter name is okay.")]
+        [Trait("Type", "WithinBounds")]
         public void TestNameLengthAtMinimum()
         {
             ValidateInput toTest = new ValidateInput();
@@ -23,7 +23,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Tests to make sure names that are too long are not okay.")]
+        [Trait("Type", "OutOfBounds")]
         public void TestNameLengthGreaterThanMaximum()
         {
             ValidateInput toTest = new ValidateInput();
@@ -31,7 +31,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Tests to make sure names of 30 characters are allowed.")]
+        [Trait("Type", "WithinBounds")]
         public void TestNameLengthAtMaximum()
         {
             ValidateInput toTest = new ValidateInput();
@@ -39,7 +39,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Tests to make sure a single letter is not a name.")]
+        [Trait("Type", "Feature")]
         public void TestNameStartsWithCapital()
         {
             ValidateInput toTest = new ValidateInput();
@@ -47,7 +47,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Tests to make sure a single letter is not a name.")]
+        [Trait("Type", "Feature")]
         public void TestNameStartsWithoutCapital()
         {
             ValidateInput toTest = new ValidateInput();

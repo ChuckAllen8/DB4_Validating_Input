@@ -7,7 +7,7 @@ namespace DB4_Validating_Input_Tests
     public class RunAgainTests
     {
         [Fact]
-        [Trait("Description", "Tests to make sure other input quits.")]
+        [Trait("Type", "OutOfBounds")]
         public void OtherInputTest()
         {
             ValidateInput toTest = new ValidateInput();
@@ -15,7 +15,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Tests to make sure yes keeps going")]
+        [Trait("Type", "Feature")]
         public void LowerCaseTest()
         {
             ValidateInput toTest = new ValidateInput();
@@ -23,7 +23,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Tests to make sure uppercase works too.")]
+        [Trait("Type", "Feature")]
         public void UpperCaseTest()
         {
             ValidateInput toTest = new ValidateInput();
@@ -31,7 +31,7 @@ namespace DB4_Validating_Input_Tests
         }
 
         [Fact]
-        [Trait("Description", "Tests to make sure the letter y works.")]
+        [Trait("Type", "Feature")]
         public void SingleLetterTest()
         {
             ValidateInput toTest = new ValidateInput();
