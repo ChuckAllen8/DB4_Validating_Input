@@ -69,7 +69,7 @@ namespace DB4_Validating_Input
          * Name Rules:
          * The name must start with a capital letter. Other letters may be capital
          * It must be between 2 and 30 characters long.
-         * Pnly letters are allowed.
+         * Only letters are allowed.
          * 
          */
         public bool VerifyName(string input)
