@@ -53,12 +53,5 @@ namespace DB4_Validating_Input_Tests
             ValidateInput toTest = new ValidateInput();
             Assert.False(toTest.VerifyName("jo"));
         }
-
-        [Fact(Skip = "Not yet implemented")]
-        [Trait("Description", "Unused Test")]
-        public void TestName()
-        {
-
-        }
     }
 }
